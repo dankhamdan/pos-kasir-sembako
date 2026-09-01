@@ -1,0 +1,128 @@
+=====================================================================
+  PETUNJUK PENGGANTIAN QRIS PLACEHOLDER
+  POS Kasir Sembako - Dan Khamdan
+================================================================-----
+
+BERKAS INI PENTING. BACA DULU SEBELUM MENGGUNAKAN qris-placeholder.png.
+
+---------------------------------------------------------------------
+1. APA ITU qris-placeholder.png?
+---------------------------------------------------------------------
+
+Berkas `qris-placeholder.png` (800x800 PNG) BUKAN QRIS ASLI yang bisa
+dipakai menerima pembayaran. Isinya hanya string contoh format QRIS
+Indonesia (berakhiran `...`) yang dipakai untuk:
+
+  - Mengisi slot QRIS pada template faktur / template email / mock-up
+    desain brosur agar layout tidak kosong.
+  - Menguji apakah script auto-delivery / halaman konfirmasi pembayaran
+    sudah menampilkan gambar QR dengan benar.
+
+String contoh di dalamnya:
+  00020101021226670016ID.CO.QRIS.WWW01189360091400123456780215
+  POS-KASIR-SEMBAKO0303UMI51440014ID.CO.QRIS.WWW0215...
+
+Jika dipindai dengan aplikasi e-wallet, TIDAK akan dikenali sebagai
+merchant manapun. Jangan pernah mengirimkan ke pembeli sebagai
+metode pembayaran resmi.
+
+---------------------------------------------------------------------
+2. CARA MENDAPATKAN QRIS ASLI (GRATIS, RESMI)
+---------------------------------------------------------------------
+
+QRIS (Quick Response Code Indonesian Standard) dikeluarkan oleh
+bank/e-wallet Anda sebagai merchant. Langkah umum:
+
+  a. Buka aplikasi bank atau e-wallet yang Anda miliki, misalnya:
+       - GoPay        (aplikasi Gojek)
+       - OVO
+       - DANA
+       - LinkAja
+       - ShopeePay
+       - Jenius
+       - Bank Jago / BCA / Mandiri / BNI / BRI (menu QRIS dinamis)
+
+  b. Cari menu dengan salah satu nama berikut:
+       - "QRIS"  /  "Terima Pembayaran"
+       - "QR Merchant"  /  "QR Dinamis"
+       - "Bisnis"  ->  "Terima Uang"  ->  "QRIS"
+
+  c. Lengkapi data merchant ( nama: "Dan Khamdan" / "POS Kasir
+     Sembako", kategori: "Perangkat Lunak" atau "Jasa", nominal
+     dinamis = ON supaya pembeli bisa input nominal sesuai paket
+     Rp 150.000 / Rp 350.000 / Rp 500.000 ).
+
+  d. Setelah disetujui (instan untuk GoPay/OVO/DANA), aplikasi akan
+     menampilkan QR. Pilih "Unduh" / "Simpan Gambar" untuk
+     menyimpan PNG ke galeri.
+
+  e. (Opsional tapi disarankan) Verifikasi QRIS di
+     https://qris.id  atau  aplikasi lain (scan -> harus muncul
+     nama merchant Anda, bukan pesan error).
+
+---------------------------------------------------------------------
+3. CARA MENGGANTI BERKAS PLACEHOLDER
+---------------------------------------------------------------------
+
+  1. Salin PNG QRIS asli dari hasil unduhan di langkah 2.d ke
+     folder ini:
+        /home/z/my-project/public/qr/
+
+  2. Ganti nama berkasnya menjadi PERSIS:
+        qris-placeholder.png
+     (hapus dulu berkas lama, lalu rename berkas baru, atau
+     timpa langsung dengan "Save As").
+
+  3. Jaga agar resolusi minimal 800x800 piksel (lebih besar lebih
+     baik untuk cetak stiker/brosur). Format PNG, bukan JPG.
+
+  4. Uji pindai dengan dua e-wallet berbeda (mis. GoPay + DANA)
+     untuk memastikan QRIS bersifat lintas-aplikasi (cross-qris).
+
+  5. Jalankan ulang auto-delivery test order untuk memastikan
+     email pembayaran yang dikirim otomatis ke pembeli kini
+     menampilkan QRIS ASLI Anda.
+
+---------------------------------------------------------------------
+4. APA YANG TERJADI JIK TIDAK DIGANTI?
+---------------------------------------------------------------------
+
+  - Pembeli yang memindai qris-placeholder.png akan gagal bayar ->
+    pembayaran tidak masuk -> order menyangkut di status PENDING.
+  - Pencitraan brand: pembeli curiga karena QR tidak terbaca.
+  - Faktur PPN/tanda terima yang dikirim lewat email kelihatan
+    tidak profesional.
+
+=> WAJIB diganti sebelum membuka kanal penjualan ke publik.
+
+---------------------------------------------------------------------
+5. CATATAN KEAMANAN
+---------------------------------------------------------------------
+
+  - Jangan pernah mengedit string QRIS secara manual di text editor.
+    Setiap karakter pada QRIS adalah data terenkripsi (CRC16);
+    mengubah 1 huruf akan membuat QR ditolak.
+  - QRIS dari bank/e-wallet adalah QRIS "Static" (tetap) atau
+    "Dynamic" (nominal bisa diisi). Untuk POS Kasir Sembako, gunakan
+    QRIS Dinamis supaya pembeli tinggal masukkan nominal paket.
+  - Simpan PNG asli di cloud (Google Drive) sebagai backup.
+  - QRIS tidak mengandung PIN / password. Aman dicetak di brosur.
+
+---------------------------------------------------------------------
+6. KONTAK BANTUAN
+---------------------------------------------------------------------
+
+  Dan Khamdan
+  WhatsApp: 0815-7226-6150  (wa.me/6281572266150)
+  Email   : dankhamdan@gmail.com
+
+  Jika bank/e-wallet menolak permohonan QRIS merchant, gunakan
+  alternatif: https://qris.id  (buat QRIS via portal BI / duitan /
+  Xendit / Midtrans - umumnya berbayar Rp 1.000 per transaksi).
+
+---------------------------------------------------------------------
+
+Setelah QRIS asli terpasang, hapus berkas teks ini jika diinginkan,
+atau simpan sebagai catatan troubleshooting untuk anggota tim lain.
+
+=====================================================================
