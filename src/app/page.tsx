@@ -1581,9 +1581,10 @@ function Demo() {
                 size="lg"
                 className="bg-orange-500 text-white shadow-lg shadow-orange-500/30 hover:bg-orange-600"
               >
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  <Sparkles className="size-4" />
-                  Coba Demo Gratis 7 Hari
+                <a href="https://script.google.com/macros/s/AKfycbwyvethtzCPKqTRGFfFgZd1dWoWw57dT9lmlmOxouGUaG2cnr2EXXLnNLfnYsWCf2bcIQ/exec" target="_blank" rel="noopener noreferrer">
+  <Sparkles className="size-4" />
+  Coba Demo Gratis 7 Hari
+</a>
                 </a>
               </Button>
               <Button
@@ -1592,10 +1593,10 @@ function Demo() {
                 variant="outline"
                 className="border-slate-300 bg-white text-slate-800 hover:bg-orange-50 hover:text-orange-600"
               >
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  <Play className="size-4" />
-                  Lihat Video Demo
-                </a>
+                <a href="/demo-tour.webm" target="_blank" rel="noopener noreferrer">
+  <Play className="size-4" />
+  Lihat Video Demo
+</a>
               </Button>
             </div>
           </div>
