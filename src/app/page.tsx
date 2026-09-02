@@ -1581,7 +1581,7 @@ function Demo() {
                 size="lg"
                 className="bg-orange-500 text-white shadow-lg shadow-orange-500/30 hover:bg-orange-600"
               >
-                <a href="https://script.google.com/macros/s/AKfycbyrNhBxZ0w61uoqpDmxFvcJVh_MHsfXZVCDnqjN7Cf2qMDV9RY-3OS6A_1OaKQhHZZW/exec" target="_blank" rel="noopener noreferrer">
+                <a href="https://script.google.com/a/~/macros/s/AKfycbyrNhBxZ0w61uoqpDmxFvcJVh_MHsfXZVCDnqjN7Cf2qMDV9RY-3OS6A_1OaKQhHZZW/exec" target="_blank" rel="noopener noreferrer">
   <Sparkles className="size-4" />
   Coba Demo Gratis 7 Hari
 </a>
