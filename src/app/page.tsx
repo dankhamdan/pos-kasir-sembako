@@ -1592,7 +1592,7 @@ function Demo() {
                 variant="outline"
                 className="border-slate-300 bg-white text-slate-800 hover:bg-orange-50 hover:text-orange-600"
               >
-                <a href="/demo-tour.webm" target="_blank" rel="noopener noreferrer">
+                <a href="/video demo.webm" target="_blank" rel="noopener noreferrer">
   <Play className="size-4" />
   Lihat Video Demo
 </a>
