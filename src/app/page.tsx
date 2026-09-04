@@ -1989,7 +1989,7 @@ function Footer() {
               © 2025 POS Kasir Sembako. All rights reserved.
             </p>
             <p className="text-xs text-slate-500">
-              Dibuat dengan Next.js + Tailwind CSS | Hosted on Google Apps Script
+              Dibuat dengan Next.js + Tailwind CSS | Developed by Dadang Hamdani
             </p>
           </div>
         </div>
