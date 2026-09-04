@@ -1973,7 +1973,7 @@ function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 size-4 text-orange-400" />
-                <span>Jakarta, Indonesia</span>
+                <span>Wijaya Regency Blok B8,indihiang,Kota Tasikmalaya </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="size-4 text-orange-400" />
